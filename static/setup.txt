@@ -1,0 +1,12 @@
+[globalString = GP:json=1]
+# jsonProcessor.inc
+includeLibs.jsonTools = typo3conf/ext/ch_arbeitsbeispiele/classes/user_jsonTools.php
+config.disableAllHeaderCode = 1
+config.doctype = none
+# setting json header. more additional headers are separated by pipe (|)
+config.additionalHeaders = Content-type:application/json
+# keep typo3 from "tidying up" perfectly valid json...
+config.xhtml_cleaning = 0
+# json encoder
+page.stdWrap.postUserFunc = user_jsonTools->pageToJson
+[global]

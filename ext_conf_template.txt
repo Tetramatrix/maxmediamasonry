@@ -1,0 +1,2 @@
+# cat=basic; type=string; label= Upload path
+uploadPath = uploads/tx_charbeitsbeispiele

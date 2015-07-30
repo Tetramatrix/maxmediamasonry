@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'ch_arbeitsbeispiele'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_charbeitsbeispiele_maxmedia">Maxmedia-Referenz</label>
+			<label index="tx_charbeitsbeispiele_maxmedia.title">Kategorie bzw. Headline</label>
+			<label index="tx_charbeitsbeispiele_maxmedia.subheadline">Subheadline</label>
+			<label index="tx_charbeitsbeispiele_maxmedia.text">Text</label>
+			<label index="tx_charbeitsbeispiele_maxmedia.link">Link</label>
+			<label index="tx_charbeitsbeispiele_maxmedia.parent_id">Kategorie</label>
+			<label index="tx_charbeitsbeispiele_maxmedia.isroot">Superkategorie</label>
+			<label index="tx_charbeitsbeispiele_maxmedia.animate">Animation</label>
+			<label index="tt_content.list_type_pi1">Arbeitsbeispiele</label>
+			<label index="tx_charbeitsbeispiele_maxmedia.target.I.0">self</label>
+			<label index="tx_charbeitsbeispiele_maxmedia.target.I.1">blank</label>
+			<label index="tx_charbeitsbeispiele_maxmedia.target">Ziel</label>
+		</languageKey>
+	</data>
+</T3locallang>

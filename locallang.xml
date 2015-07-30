@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for extension 'ch_arbeitsbeispiele'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="pi1_title">ch_arbeitsbeispiele</label>
+			<label index="pi1_plus_wiz_description">Arbeitsbeispiele</label>
+			<label index="tt_content.pi_flexform.template_file">Template file</label>
+			<label index="tt_content.pi_flexform.model_file">Model file</label>
+			<label index="tt_content.pi_flexform.sheet_general">Allgemein</label>
+			<label index="tt_content.pi_flexform.starting_point">Startpunkt</label>
+		</languageKey>
+	</data>
+</T3locallang>

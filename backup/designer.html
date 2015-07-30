@@ -1,0 +1,47 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"></head><body><h3>Meine Arbeitsbeispiele</h3>
+<em>This is the Meine Arbeitsbeispiele template</em>
+<!-- ###BEISPIELE### begin -->
+<form action="###FORM###" method="GET" enctype="multipart/form-data" id="tx-charbeitsbeispiele-pi1" onsubmit="return false;">
+    <div class="wrapper">
+        <div style="float:left;padding:0px;margin:0px;">###NAVIGATION###</div>
+        <div id="singleview" style="top:-800px" class="singleview"></div>
+	<div id="container"></div>
+    </div>
+</form>
+<script id="brickTemplate" type="text/html">
+    <div style="width:${Width};height:${Height}" class="brick">
+        <div style="width:${Width};height:${Height}" class="background">
+            <a class="arrow" href="${Link}" onClick="${OnClick}" target="${Target}">
+            <div class="teaser">
+                <h3>${Headline}</h3>
+                <p class="subheadline">${Subheadline}</p>
+                <hr class="divider">
+                <p>${Text}</p>
+            </div>
+            <img class="img" src="${Image}" width="${Width}" height="${Height}"/>
+            </a>
+        </div>
+    </div>    
+</script>
+<script id="singleviewTemplate" type="text/html">
+    <div style="float:left;margin-top:-10px">
+        <p>{{html bodytext}}</p>
+    </div>
+    <div style="float:right;align:right"><a class="bb" href="javascript:return false;" onClick="maxmedia.gridview();return false;">[<b>X</b>] back</a></div>
+</script>
+<!-- ###BEISPIELE### begin -->
+
+<h3>Menu</h3>
+<em>This is the menu template</em>
+<!-- ###MENU### begin -->
+    <div class="shadow">
+        <div class="logo">Chi Hoang</div>
+        <ul class="menu" id="menu">
+            <!-- ###ITEM_NO### -->
+                <li class="ref_no"><a href="###URL###" class="refid">###TITLE###</a></li>
+            <!-- ###ITEM_NO### -->
+        </ul>
+        <div class="footer"><a class="contact" href="mailto:info@www.chihoang.de">Contact</a></div>
+    </div>
+<!-- ###MENU### end --></body></html>

@@ -1,0 +1,108 @@
+--- masonry.js	2011-10-17 20:57:43.000000000 +0200
++++ masonry.js.1	2011-11-05 16:37:11.000000000 +0100
+@@ -17,7 +17,18 @@
+      $j("#tx-charbeitsbeispiele-pi1 #menu li").click(function() {
+       $j.getJSON($j(this).find('a').attr('href'), function(json) {
+         var container = $j('#tx-charbeitsbeispiele-pi1 #container');
+-        container.masonry();
++        // Start masonry animated
++        $j('#tx-charbeitsbeispiele-pi1 #container').masonry({
++         itemSelector: '.brick',
++         columnWidth: 390,
++          isAnimated: !Modernizr.csstransitions,
++          animationOptions: {
++          duration: 500,
++          easing: 'linear',
++          queue: false
++        }
++       });
++       if (json != undefined) {
+         $j.each(json, function(idx, ele) {
+           if (ele.killbit == "on") {
+             if (ele.Additem == "Append") {
+@@ -66,9 +77,10 @@
+             brick.mouseleave(function() {
+               hide_summary(brick_stack.pop());
+             });
+-          });
+-        });
+-      });
++          }); // container
++        }); // each
++       }
++      }); // getJson
+       return false; // don't follow the link!
+     });
+   }
+@@ -230,32 +242,32 @@
+                 // Animation complete
+               });
+             });
+-          }
+-          // Bind Mousemove
+-          brick.mousemove(function() {
+-            var content = $j(this).find(">div");
+-            var summary = $j(this).find(".teaser");
+-            var img = $j(this).find("img");
+-            if (!content.is(":animated") && summary.is(":not(:visible)")) {
+-              content.css({
+-                height: img.attr("height"),
+-                position: "relative",
+-                top: -35 - summary.height()
+-              });
+-              summary.show();
+-              brick_stack.unshift(this);
+-              content.animate({
+-                top: 0
+-              });
+-              while (brick_stack.length > 1) {
+-                hide_summary(brick_stack.pop());
+-              }
+-            }
+-          });
+-          // Bind mouseleave
+-          brick.mouseleave(function() {
++            // Bind Mousemove
++            brick.mousemove(function() {
++             var content = $j(this).find(">div");
++             var summary = $j(this).find(".teaser");
++             var img = $j(this).find("img");
++             if (!content.is(":animated") && summary.is(":not(:visible)")) {
++               content.css({
++                 height: img.attr("height"),
++                 position: "relative",
++                 top: -35 - summary.height()
++               });
++               summary.show();
++               brick_stack.unshift(this);
++               content.animate({
++                 top: 0
++               });
++               while (brick_stack.length > 1) {
++                 hide_summary(brick_stack.pop());
++               }
++             }
++           });
++           // Bind mouseleave
++           brick.mouseleave(function() {
+             hide_summary(brick_stack.pop());
+           });
++         } //if
+         }); // ImagesLoadead
+       }); // each
+       var reloadLink = $j("#tx-charbeitsbeispiele-pi1 #menu li:first");
+@@ -299,9 +311,9 @@
+ })();
+ 
+ 
+-var $ = $.noConflict();
+-$(document).ready(function() {
+-  var maxmedia = new Arbeitsbeispiele($);
++var j = jQuery.noConflict();
++j(document).ready(function() {
++  var maxmedia = new Arbeitsbeispiele(j);
+   maxmedia.reload();
+   maxmedia.ajax();
+-});
+\ Kein Zeilenumbruch am Dateiende.
++});
